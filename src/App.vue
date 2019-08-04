@@ -85,7 +85,7 @@ main {
 }
 h2 {
   text-align: center;
-  color: rgb(10, 10, 10);
+  color: rgb(83, 79, 79);
   font-family: Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: bold;
@@ -163,6 +163,17 @@ ul li {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(226, 224, 224, 0.75);
 }
 
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card__list:hover {
+  margin-top: 0px;
+  outline: 0 solid #fff;
+  border-top: 0px solid #fff;
+  border-bottom: 1px solid #fff;
+}
 .card img {
   max-width: 100%;
   vertical-align: top;
@@ -177,5 +188,18 @@ ul li {
   padding: 15px;
   bottom: 0px;
   transition: all 0.5s ease;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease;
+}
+.card:hover:before {
+  width: 100%;
 }
 </style>
